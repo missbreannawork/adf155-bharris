@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Accessible Soundboard</title>
+
+    <!-- Link CSS  -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body>
+    <main class="app" aria-describedby="instructions">
+      <header class="header">
+        <h1 class="title">Accessible Soundboard</h1>
+
+        <p class="subtitle" id="instructions">
+          Tab to focus pads. Use Arrow keys to move between pads and regions. Press Enter/Space to play.
+          You can also press the pad letter key (K, G, J, D, L, H).
+        </p>
+
+        <div class="now-playing" aria-live="polite" aria-atomic="true">
+          <span class="np-label">Now Playing:</span>
+          <span class="np-value" id="nowPlayingText">Nothing yet</span>
+        </div>
+
+        <!-- Screen reader status -->
+        <p id="srStatus" class="sr-only" aria-live="polite" aria-atomic="true">Ready.</p>
+      </header>
+
+      <!-- ====== DRUMS (3 pads in HTML ) ====== -->
+      <section class="region" data-region="drums" aria-labelledby="drumsTitle">
+        <h2 class="region-title" id="drumsTitle">DRUMS</h2>
+
+        <div class="pad-grid pad-grid--3" role="group" aria-label="Drum pads">
+          <button
+            class="pad"
+            type="button"
+            data-region="drums"
+            data-key="K"
+            data-label="Tom"
+            data-file="./sounds/tom.mp3"
+            data-index="0"
+            aria-label="Tom pad. Key K."
+          >
+            <span class="pad-key" aria-hidden="true">K</span>
+            <span class="pad-name" aria-hidden="true">TOM</span>
+          </button>
+
+          <button
+            class="pad"
+            type="button"
+            data-region="drums"
+            data-key="G"
+            data-label="Boom"
+            data-file="./sounds/boom.mp3"
+            data-index="1"
+            aria-label="Boom pad. Key G."
+          >
+            <span class="pad-key" aria-hidden="true">G</span>
+            <span class="pad-name" aria-hidden="true">BOOM</span>
+          </button>
+
+          <button
+            class="pad"
+            type="button"
+            data-region="drums"
+            data-key="J"
+            data-label="Snare"
+            data-file="./sounds/snare.mp3"
+            data-index="2"
+            aria-label="Snare pad. Key J."
+          >
+            <span class="pad-key" aria-hidden="true">J</span>
+            <span class="pad-name" aria-hidden="true">SNARE</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ====== CYMBALS  ====== -->
+      <section class="region" data-region="cymbals" aria-labelledby="cymbalsTitle">
+        <h2 class="region-title" id="cymbalsTitle">CYMBALS</h2>
+
+        <div
+          class="pad-grid pad-grid--2"
+          role="group"
+          aria-label="Cymbal pads"
+          id="cymbalsPads"
+        ></div>
+      </section>
+
+      <!-- ====== OTHER  ====== -->
+      <section class="region" data-region="other" aria-labelledby="otherTitle">
+        <h2 class="region-title" id="otherTitle">OTHER</h2>
+
+        <div
+          class="pad-grid pad-grid--1"
+          role="group"
+          aria-label="Other pads"
+          id="otherPads"
+        ></div>
+      </section>
+
+      <footer class="footer">
+        Controls:
+        <kbd>Tab</kbd>
+        <kbd>←</kbd><kbd>→</kbd><kbd>↑</kbd><kbd>↓</kbd>
+        <kbd>Enter</kbd>
+        <kbd>Space</kbd>
+        + letter hotkeys.
+      </footer>
+    </main>
+
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>
