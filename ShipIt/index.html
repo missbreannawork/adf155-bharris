@@ -1,0 +1,89 @@
+<!--
+  ShipIt static demo (HTML/CSS/JS only).
+  Profile data mirrors the RandomUser API schema for instructional purposes.
+  Live fetch is intentionally disabled as a student challenge.
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ShipIt (Static Demo)</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Core stylesheet for the static demo -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Page background with stars pattern -->
+    <div class="page">
+      <!-- Main container matching React app structure -->
+      <div class="container">
+        <!-- Global header with logo, search, and session actions -->
+        <header class="site-header">
+          <a class="logo" href="#/" aria-label="ShipIt home">
+            <img src="img/logo-s.png" alt="ShipIt Logo" class="logo-image" />
+            <span class="logo-text">hipIt</span>
+          </a>
+
+          <div class="search">
+            <span class="search-icon" aria-hidden="true"><i class="fas fa-search"></i></span>
+            <input
+              id="global-search"
+              type="text"
+              placeholder="search by keywords or tags..."
+              aria-label="Global search"
+            />
+          </div>
+
+          <div id="session-actions" class="session-actions">
+            <!-- Filled by JS (login/join or user menu) -->
+          </div>
+        </header>
+
+        <!-- Two-column app layout: side menu + main content -->
+        <div class="layout">
+          <aside class="side-menu">
+            <!-- Primary navigation -->
+            <nav>
+              <p class="menu-label">Menu</p>
+              <ul class="menu-list">
+                <li><a href="#/" data-nav="/">Home</a></li>
+                <li><a href="#/tags" data-nav="/tags">Tags</a></li>
+                <li><a href="#/users" data-nav="/users">Users</a></li>
+              </ul>
+
+              <div id="dashboard-area">
+                <p class="menu-label">Dashboard</p>
+                <ul class="menu-list">
+                  <li><a href="#/users/me" data-nav="/users/me">Profile</a></li>
+                  <li><a href="#/posts" data-nav="/posts">Your Posts</a></li>
+                  <li><a href="#/settings" data-nav="/settings">Settings</a></li>
+                </ul>
+
+                <p class="menu-label">Watched Tags</p>
+                <ul class="menu-list" id="watched-tags">
+                  <!-- Filled by JS -->
+                </ul>
+              </div>
+            </nav>
+          </aside>
+
+          <!-- Main content area rendered by JS -->
+          <main id="view" class="content" aria-live="polite"></main>
+        </div>
+      </div>
+
+      <!-- Footer note -->
+      <footer class="site-footer">
+        <p>
+        ShipIt demo: HTML/CSS/JS only. Static data inspired by <a href="https://randomuser.me/" target="_blank">RandomUser API</a>.
+        </p>
+      </footer>
+    </div>
+
+    <!-- App logic (routing, rendering, and data) -->
+    <script src="app.js"></script>
+  </body>
+</html>
