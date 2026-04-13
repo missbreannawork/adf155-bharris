@@ -238,3 +238,10 @@ This project is a redesigned version of the ShipIt interface with a custom brand
 - Add more UI components
 - Improve responsiveness
 - Expand functionality in next course
+
+## MVP (Sprint 1)
+- Custom color theme (dark UI with accent color)
+- Typography system (heading + body font)
+- Styled layout (header, sidebar, content)
+- Search bar UI
+- Post cards design
