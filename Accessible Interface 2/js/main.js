@@ -12,14 +12,14 @@
   // Cymbals: D, L   (JS adds)
   // Other: H        (JS adds)
   const SOUND_MAP = {
-    K: { name: "Tom", region: "drums", file: "/sounds/tom.mp3" },
-    G: { name: "Boom", region: "drums", file: "/sounds/boom.mp3" },
-    J: { name: "Snare", region: "drums", file: "/sounds/snare.mp3" },
+    K: { name: "Tom", region: "drums", file: "../sounds/tom.mp3" },
+    G: { name: "Boom", region: "drums", file: "../sounds/boom.mp3" },
+    J: { name: "Snare", region: "drums", file: "../sounds/snare.mp3" },
 
-    D: { name: "Kick", region: "cymbals", file: "/sounds/kick.mp3" },
-    L: { name: "Tink", region: "cymbals", file: "/sounds/tink.mp3" },
+    D: { name: "Kick", region: "cymbals", file: "../sounds/kick.mp3" },
+    L: { name: "Tink", region: "cymbals", file: "../sounds/tink.mp3" },
 
-    H: { name: "Ride", region: "other", file: "/sounds/ride.mp3" }
+    H: { name: "Ride", region: "other", file: "../sounds/ride.mp3" }
   };
 
   // ---- Create pad button  ----
