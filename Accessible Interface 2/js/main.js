@@ -210,3 +210,12 @@
   // initial status
   srStatus.textContent = "Ready. Tab to focus pads. Use arrow keys to move.";
 })();
+
+const buttons = document.querySelectorAll('button');
+const status = document.getElementById('status');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    status.textContent = "Now Playing: " + button.textContent;
+  });
+});
