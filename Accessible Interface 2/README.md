@@ -36,4 +36,34 @@ Users can trigger sounds by clicking buttons or using keyboard shortcuts. The in
 ## Future Improvements
 - Add volume controls
 - Add additional sound categories
-- Improve accessibility 
+- Improve accessibility
+
+# Accessible Soundboard
+
+## Overview
+This project is an interactive soundboard designed with accessibility in mind.
+
+## Features
+- Keyboard controls (K, G, J, etc.)
+- Interactive sound playback
+- Organized file structure
+- Accessible UI
+
+## How to Use
+- Press buttons or keys to play sounds
+- Tab to navigate
+- Enter/Space to activate
+
+## Technologies
+- HTML
+- CSS
+- JavaScript
+
+## Updates
+- Fixed sound playback issues
+- Improved styling
+- Organized files
+
+## Future Improvements
+- Add more sounds
+- Improve accessibility features
