@@ -23,6 +23,13 @@ This project is a web application that demonstrates UI design and functionality.
 ## Project Overview
 This project is an accessible web-based soundboard that allows users to trigger sounds using both mouse clicks and keyboard input.
 
+
+## Final Milestone
+
+- Fixed audio file paths
+- Improved UI styling
+- Cleaned repository
+- Added accessibility instructions
 ## Features
 - Keyboard controls (K, G, J, D, L, H)
 - Clickable sound buttons
